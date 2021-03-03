@@ -1,0 +1,318 @@
+➜  clmystery-master grep -A 5 mystery/vehicles
+^C
+➜  clmystery-master cat hint7
+In order to actually get information about vehicles that might match our description,
+we need to get multiple lines AROUND each match.  We can use the -A, -B, or -C option with grep:
+
+	grep -A 5 "L337" mystery/vehicles
+
+This will match the license plates that contain "L337" and, for each match, show us the five lines AFTER it.% ➜  clmystery-master     grep -A 5 "L337" mystery/vehicles
+
+License Plate L337ZR9
+Make: Honda
+Color: Red
+Owner: Katie Park
+Height: 6'2"
+Weight: 189 lbs
+--
+License Plate L337P89
+Make: Honda
+Color: Teal
+Owner: Mike Bostock
+Height: 6'4"
+Weight: 173 lbs
+--
+License Plate L337GX9
+Make: Mazda
+Color: Orange
+Owner: John Keefe
+Height: 6'4"
+Weight: 185 lbs
+--
+License Plate L337QE9
+Make: Honda
+Color: Blue
+Owner: Erika Owens
+Height: 6'5"
+Weight: 220 lbs
+--
+License Plate L337GB9
+Make: Toyota
+Color: Blue
+Owner: Matt Waite
+Height: 6'1"
+Weight: 190 lbs
+--
+License Plate L337OI9
+Make: Jaguar
+Color: Blue
+Owner: Brian Boyer
+Height: 6'6"
+Weight: 201 lbs
+--
+License Plate L337X19
+Make: Fiat
+Color: Blue
+Owner: Al Shaw
+Height: 6'5"
+Weight: 240 lbs
+--
+License Plate L337539
+Make: Honda
+Color: Blue
+Owner: Aron Pilhofer
+Height: 5'3"
+Weight: 198 lbs
+--
+License Plate L3373U9
+Make: Ford
+Color: Blue
+Owner: Miranda Mulligan
+Height: 6'6"
+Weight: 156 lbs
+--
+License Plate L337369
+Make: Honda
+Color: Blue
+Owner: Heather Billings
+Height: 5'2"
+Weight: 244 lbs
+--
+License Plate L337DV9
+Make: Honda
+Color: Blue
+Owner: Joe Germuska
+Height: 6'2"
+Weight: 164 lbs
+--
+License Plate L3375A9
+Make: Honda
+Color: Blue
+Owner: Jeremy Bowers
+Height: 6'1"
+Weight: 204 lbs
+--
+License Plate L337WR9
+Make: Honda
+Color: Blue
+Owner: Jacqui Maher
+Height: 6'2"
+Weight: 130 lbs
+➜  clmystery-master hint8
+zsh: command not found: hint8
+➜  clmystery-master cat hint8
+To see who was a member of several different groups, you can combine their membership lists into one and search against that.
+
+	cat Fitness_Galaxy AAA United_MileagePlus | grep "John Smith"
+
+If you only want to see the number of matches, you can use grep's -c option (the c must be lowercase):
+
+	cat Fitness_Galaxy AAA United_MileagePlus | grep -c "John Smith"
+
+Or you can pipe the result to 'wc -l':
+
+	cat Fitness_Galaxy AAA United_MileagePlus | grep "John Smith" | wc -l%                                ➜ ➜ ➜  clm➜ ➜ ➜ ➜  c➜  c➜  c➜ ➜ ➜ ➜ ➜ ➜  clmystery-master CLUE
+zsh: command not found: CLUE
+➜  clmystery-master grep "CLUE" crimescene
+grep: crimescene: No such file or directory
+➜  clmystery-master mystery
+➜  mystery grep "CLUE" crimescene
+CLUE: Footage from an ATM security camera is blurry but shows that the perpetrator is a tall male, at least 6'.
+CLUE: Found a wallet believed to belong to the killer: no ID, just loose change, and membership cards for AAA, Delta SkyMiles, the local library, and the Museum of Bash History. The cards are totally untraceable and have no name, for some reason.
+CLUE: Questioned the barista at the local coffee shop. He said a woman left right before they heard the shots. The name on her latte was Annabel, she had blond spiky hair and a New Zealand accent.
+➜  mystery cd ..
+➜  clmystery-master mysetru
+zsh: command not found: mysetru
+➜  clmystery-master mystery
+➜  mystery memberships
+➜  memberships  cat Joe Germushka                                        
+cat: Joe: No such file or directory
+cat: Germushka: No such file or directory
+➜  memberships CAT AAA Delta_Skyline
+zsh: command not found: CAT
+➜  memberships CAT AAA Delta_Skyline |grep Jeremy Bowers
+zsh: command not found: CAT
+grep: Bowers: No such file or directory
+➜  memberships CAT Jeremy Bowers
+zsh: command not found: CAT
+➜  memberships grep Jeremy Bowers
+grep: Bowers: No such file or directory
+➜  memberships CAT AAA
+zsh: command not found: CAT
+➜  memberships echo TheGuiltyName
+TheGuiltyName
+➜  memberships cat AAA Delta_Skyline Museum_of_Bash_History | grep "Jeremy Bowers"| wc -1
+cat: Delta_Skyline: No such file or directory
+wc: invalid option -- '1'
+Try 'wc --help' for more information.
+➜  memberships  cat AAA Delta_Skyline Museum_of_Bash_History | grep "Jeremy Bowers"
+cat: Delta_Skyline: No such file or directory
+Jeremy Bowers
+Jeremy Bowers
+➜  memberships cat AAA Delta_SkyMiles Museum_of_Bash_History | grep "Jeremy Bowers"
+Jeremy Bowers
+Jeremy Bowers
+Jeremy Bowers
+➜  memberships echo Jeremy Bowers
+Jeremy Bowers
+➜  memberships cat my_history.log
+cat: my_history.log: No such file or directory
+➜  memberships my history
+zsh: command not found: my
+➜  memberships history
+    1  cp Downloads
+    2  ls
+    3  unzip README.md
+    4  cp clmystery-master.zip
+    5  Downloads
+    6  ls
+    7  unzip clmystery-master.zip
+    8  instructions
+    9  ls
+   10  unzip clmystery-master.zip 
+   11  cat instructions
+   12  ls
+   13  clymestery-master
+   14  clmystery-master.zip 
+   15  ls
+   16  instructions
+   17  clmystery-master
+   18  instructions
+   19  cat instructions
+   20  mystery
+   21  ls
+   22  crimescene
+   23  cat crimescene
+   24  cp ..
+   25  clmystery-master
+   26  cp clymstery-master
+   27  /hint1
+   28  cd
+   29  cat hint1
+   30  open hint1
+   31  hint1
+   32  ls
+   33  Downloads
+   34  clmystery-master
+   35  hint1
+   36  open hint1
+   37  pwd
+   38  ls
+   39  hint1
+   40  cat hint1
+   41  mystery head -n
+   42  mystery
+   43  head-n
+   44  head
+   45  ls
+   46  head
+   47  head - 20 crimescene
+   48  head -n 20 crimescene
+   49  cd
+   50  clmystery
+   51  Downlowads
+   52  ls
+   53  Downloads
+   54  ls
+   55  clymstery-master
+   56  clmystery-master
+   57  grep "CLUE"
+   58  ls
+   59  mystery
+   60  grep "CLUE"
+   61  grep "CLUE" crimescene
+   62  ls
+   63  people
+   64  people grep "{M, 6}\n\nZ\nZ\n\nls\nStop\n\n\nhead\nexit\nmystery\ncp\npwd
+   65  people grep "{M, 6}"\n\nZ\nZ\n\nls\nStop\n\n\nhead\nexit\nmystery\ncp\npwd
+   66  people grep "{M, 6}"
+   67  grep people "{M, 6}"
+   68  people grep Anabell
+   69  grep people Annabel
+   70  grep "Annabel" people
+   71  grep "Annabel" interviews
+   72  grep "Annabel" 
+   73  membership
+   74  memberships
+   75  ls
+   76  mystery
+   77  cp
+   78  cp ..
+   79  cd ..
+   80  grep "Buckingham" interviews
+   81  interviews
+   82  grep "Buckingham"
+   83  grep "Buckingham Place, line 179"\n
+   84  cp ..
+   85  cd ..
+   86  cd..
+   87  cd ..
+   88  hint5
+   89  cat hint5
+   90  interviews
+   91  mystery
+   92  head -n Buckingham Place 
+   93  head -n 173 line
+   94  head -n Buckingham Place, line 179
+   95  head-n 179
+   96  head - n 179
+   97  head - n 179/Buckingham
+   98  cat interview line 179
+   99  interviews
+  100  head 179 
+  101  179
+  102  line 179
+  103  cat 179
+  104  cat line 179
+  105  head -n 179
+  106  head -n 179 tail -n 5
+  107  head 179 tail -n5
+  108  grep Buckingham
+  109  grep "Buckingham"
+  110  cd ...
+  111  mystery
+  112  head -n179 streets/Buckingham_Place | tail -n 1
+  113  interview
+  114  interviews
+  115  #699607
+  116  grep #699607
+  117  cat [#699607]
+  118  grep#699607
+  119  [
+  120  cat interview-699607
+  121  cd ..
+  122  vehicules
+  123  vehicles
+  124  head "L337" vehicles
+  125  head "honda" vehicles
+  126  head -n 50  vehicles
+  127  cat "L337" vehicles
+  128  grep -A "L337" vehicles
+  129  cp ..
+  130  cd ..
+  131  grep -A 5 mystery/vehicles
+  132  cat hint7
+  133  \tgrep -A 5 "L337" mystery/vehicles\n
+  134  hint8
+  135  cat hint8
+  136  CLUE
+  137  grep "CLUE" crimescene
+  138  mystery
+  139  grep "CLUE" crimescene
+  140  cd ..
+  141  mysetru
+  142  mystery
+  143  memberships
+  144  \tcat Joe Germushka
+  145  CAT AAA Delta_Skyline
+  146  CAT AAA Delta_Skyline |grep Jeremy Bowers
+  147  CAT Jeremy Bowers
+  148  grep Jeremy Bowers
+  149  CAT AAA
+  150  echo TheGuiltyName
+  151  cat AAA Delta_Skyline Museum_of_Bash_History | grep "Jeremy Bowers"| wc -1
+  152  cat AAA Delta_SkyMiles Museum_of_Bash_History | grep "Jeremy Bowers"
+  153  echo Jeremy Bowers
+  154  cat my_history.log
+  155  my history
+➜  memberships 
